@@ -22,7 +22,7 @@ function App() {
   setName(name+123)
   console.log(name); 
  }
-
+  
   const [username, setUsername] = useState("");
   const [users, setUsers] = useState([]);//
   
@@ -31,12 +31,12 @@ function App() {
       alert("input field can not be empty")
       return
     }
-    else
-  setUsers([...users, username]);// is line ke wja sa hr any wali new wali users l variable ma addup ho rheha just like an array
-  console.log(username);
-  console.log(users);
-  setUsername("");// to empty input feild
-  }
+    else{ setUsers([...users, username]);// is line ke wja sa hr any wali new wali users l variable ma addup ho rheha just like an array
+      console.log(username);
+      console.log(users);
+      setUsername("");// to empty input feild}
+    }
+ 
  };
 
  const clearAll = () => {
@@ -64,7 +64,7 @@ function App() {
         {/* <button onClick={updateCounter}>COUNTER</button> */}
 
         {/* <button className="text-xl" onClick={updateName}>update name</button> */}
-
+       
         <input
         value={username}
         placeholder="Your Name"

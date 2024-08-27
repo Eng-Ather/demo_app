@@ -27,10 +27,16 @@ function App() {
   const [users, setUsers] = useState([]);//
   
   const addUser = () => {
+    if(!username){
+      alert("input field can not be empty")
+      return
+    }
+    else
   setUsers([...users, username]);// is line ke wja sa hr any wali new wali users l variable ma addup ho rheha just like an array
   console.log(username);
   console.log(users);
   setUsername("");// to empty input feild
+  }
  };
 
  const clearAll = () => {
